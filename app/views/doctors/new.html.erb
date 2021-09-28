@@ -3,5 +3,18 @@
     <h1>New Doctor</h1>
   </div>
 
-  <p>Replace me with your form!</p>
+  <%= form_for @doctor do |doc| %>
+    <%= doc.label :doctor_name %>
+    <%= doc.text_field :name %><br>
+
+    <%= doc.fields_for :patients do |patient| %>
+      <%= patient.label :patient_name %>
+      <%= patient.text_field :name %><br>
+
+      <%= patient.label :patient_age %>
+      <%= patient.number_field :age %><br>
+    <% end %>
+
+  <%= doc.submit %>
+  <% end %>
 </div>
