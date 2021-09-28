@@ -8,10 +8,10 @@
     <%= doc.text_field :name %><br>
 
     <%= doc.fields_for :patients do |patient| %>
-      <%= patient.label :patient_name %>
+      <%= patient.label :patient_name_1 %>
       <%= patient.text_field :name %><br>
 
-      <%= patient.label :patient_age %>
+      <%= patient.label :patient_age_1 %>
       <%= patient.number_field :age %><br>
     <% end %>
 
